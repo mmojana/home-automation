@@ -4,9 +4,9 @@ TL:DR GOTO [installation chapter](#installation)
 
 ## Features
 
-This is the Arduino source code for my thermostats, that takes care of:
-- Configure the RFM69HW radio
-- Configure the BME280 temperature and humidity sensor for minimum energy consumption
+This is the Arduino source code for my thermostats, that:
+- Configures the RFM69HW radio
+- Configures the BME280 temperature and humidity sensor for minimum energy consumption
 - Monitors the battery voltage and reports it back to the gateway
 - Supports both metric and imperial units
 - Uses deep sleep to save battery life.
@@ -19,7 +19,7 @@ In order to make this sketch compile, you have to install (Sketch => Include Lib
 - [MySensors](https://github.com/mysensors/MySensors/tree/master)
 - [Adafruit Unified Sensor](https://github.com/adafruit/Adafruit_Sensor)
 - [Adafruit BME Library](https://github.com/adafruit/Adafruit_BME280_Library)
-- This code is meant to work with the board that I have published [here](../hardware).
+- This code is meant to work with the board that I have published [here](../thermostat-node-hardware/).
 
 ## Installation
 
@@ -33,6 +33,7 @@ This is the procedure to correctly flash the Arduino Pro Mini with the working c
 ```
 
 Substitute `<your 128-bit AES key>` with a random sequence of bits that must be the same on all nodes and the MySensors gateway configuration file. Keep the same format (`0x12,0x34,...`) as in the uncustomized sketch.
+
 3. Select (Tools => Board) the board `Arduino Pro or Pro Mini`
 4. Select (Tools => Processor) the processor `ATmega328P (3.3V, 8 MHz)`
 5. Select (Tools => Programmer) the programmer `AVRISP mkII`
