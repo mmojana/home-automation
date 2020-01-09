@@ -1,7 +1,6 @@
 /**
  * 
  * Created by Marco Mojana
- * From https://github.com/mysensors/MySensorsArduinoExamples/blob/master/examples/Si7021TemperatureAndHumiditySensor/Si7021TemperatureAndHumiditySensor.ino by Henrik Ekblad
  * Copyright (C) 2019 Marco Mojana
  * 
  * This program is free software; you can redistribute it and/or
