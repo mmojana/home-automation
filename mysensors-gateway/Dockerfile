@@ -14,9 +14,14 @@ RUN apt-get update && \
   rm -rf /tmp/MySensors
 
 COPY mysensors.conf /etc/mysensors.conf
+COPY entrypoint.sh /tmp
+
+RUN chmod u+x /tmp/entrypoint.sh
 
 EXPOSE 5003
 
+ENTRYPOINT ["/tmp/entrypoint.sh"]
+
 HEALTHCHECK CMD nc -z localhost 5003
 
-ENTRYPOINT ["/usr/local/bin/mysgw"]
+CMD ["/usr/local/bin/mysgw"]
