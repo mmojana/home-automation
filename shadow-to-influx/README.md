@@ -38,6 +38,7 @@ mvn clean package
 }
 ```
 Please replace `<ARN_here>`with the ARN of the secret defined at step 2. They normally start with `arn:aws:secretsmanager:`.
+
 7. Add a trigger of type "AWS IoT" to the function.
 Define a custom rule like the following:
 ```
