@@ -5,7 +5,7 @@ RUN mvn -e -B dependency:resolve
 COPY src ./src
 RUN mvn -e -B -DfinalName=app package
 
-FROM openjdk:8-jre-alpine
+FROM arm32v7/openjdk:8-jre-alpine
 COPY --from=builder /app/target/app.jar /
 
 COPY entrypoint.sh /tmp
