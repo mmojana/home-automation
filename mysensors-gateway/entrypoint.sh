@@ -9,5 +9,10 @@ echo -n -e `echo ${AES_KEY} | sed 's/\([0-9A-F]\{2\}\)/\\\\x\1/g'` | dd of=/etc/
 
 sed -i "s/^aes_key=.*$/aes_key=${AES_KEY}/g" /etc/mysensors.conf
 
+echo "Enabling coredump..."
+ulimit -c unlimited
+ulimit -a
+
 echo "Starting MySensors gateway..."
+cat /tmp/version.txt
 exec "$@"

@@ -18,6 +18,8 @@ COPY entrypoint.sh /tmp
 
 RUN chmod u+x /tmp/entrypoint.sh
 
+RUN git reflog --decorate -1 > /tmp/version.txt
+
 EXPOSE 5003
 
 ENTRYPOINT ["/tmp/entrypoint.sh"]
