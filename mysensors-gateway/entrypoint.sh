@@ -12,6 +12,8 @@ sed -i "s/^aes_key=.*$/aes_key=${AES_KEY}/g" /etc/mysensors.conf
 echo "Enabling coredump..."
 ulimit -c unlimited
 ulimit -a
+echo "Setting coredump format..."
+sysctl -w kernel.core_pattern=/tmp/core.%e.%p
 
 echo "Starting MySensors gateway..."
 cat /tmp/version.txt
