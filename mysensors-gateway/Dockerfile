@@ -10,7 +10,7 @@ RUN apt-get update && \
   make && \
   make all install-gateway clean && \
   git reflog --decorate -1 > /tmp/version.txt && \
-  apt-get purge --auto-remove git make gcc g++ && \
+#  apt-get purge --auto-remove git make gcc g++ && \
   cd .. && \
   rm -rf /tmp/MySensors
 
