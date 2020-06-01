@@ -17,4 +17,4 @@ sysctl -w kernel.core_pattern=/tmp/core.%e.%p
 
 echo "Starting MySensors gateway..."
 cat /tmp/version.txt
-exec "$@"
+exec "gdb -batch -x /tmp/gdbcmds --args $@"
